@@ -1,0 +1,19 @@
+
+----------
+  -list
+----------
+
+  use:
+  ---
+
+    used for listing the paths of the mutually exclusive files of the
+    2 directories.
+
+  usage:
+  -----
+
+    xfiles  dir_path_1  dir_path_2  -list
+    xfiles  dir_path_1  dir_path_2  -l
+
+    this command can also be used as the sub-command to the -filter
+    or the -f command.

@@ -1,0 +1,41 @@
+
+------------
+   xfiles
+------------
+
+  use:
+  ---
+
+    this tool can find by names the mutually exclusive files of stated
+    two directories.
+
+    it can show you the mutually exclusive files as embedded into the
+    two dir trees corresponding to your two stated dirs.
+
+    it can tell you the total sizes & the total counts of those files
+    as well as list those files too.
+
+    comparision criteria:
+    --------------------
+
+      two dirs are different if their names do not match.
+
+      two files are different if their names alongside their extensions
+      do not match.
+
+  usage:
+  -----
+
+    xfiles  dir_path_1  dir_path_2  [command]
+
+    list of commands:
+    ----------------
+                                  short-form
+      -max-depth                    -md
+      -filter                       -f
+      -overview                     -o
+      -list                         -l
+
+      to get helpful information about a command, execute:
+
+        xfiles  -h  command

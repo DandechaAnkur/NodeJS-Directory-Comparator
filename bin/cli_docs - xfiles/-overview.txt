@@ -1,0 +1,19 @@
+
+--------------
+  -overview
+--------------
+
+  use:
+  ---
+
+    it is used to view the minimal details - only the total counts
+    & the total sizes of - the mutually exclusive files.
+
+  usage:
+  -----
+
+    xfiles  dir_path_1  dir_path_2  -overview
+    xfiles  dir_path_1  dir_path_2  -o
+
+    this command can also be used as the sub-command to the -filter
+    or the -f command.

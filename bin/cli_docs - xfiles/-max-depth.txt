@@ -1,0 +1,28 @@
+
+----------------
+  -max-depth
+----------------
+
+  use:
+  ---
+
+    used to specify how deep the dir trees have to be.
+
+  usage:
+  -----
+
+    xfiles  dir_path_1  dir_path_2  -max-depth  int_gt_zero  [command]
+    xfiles  dir_path_1  dir_path_2  -md         int_gt_zero  [command]
+
+    int_gt_zero i.e., an integer greater than zero.
+
+    list of commands:
+    ----------------
+                                  short-form
+      -filter                       -f
+      -list                         -l
+      -overview                     -o
+
+      to get helpful information about a command, execute:
+
+        xfiles  -h  command

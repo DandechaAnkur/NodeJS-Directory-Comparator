@@ -1,0 +1,77 @@
+
+------------
+  -filter
+------------
+
+  use:
+  ---
+
+    used to filter files whose paths match specified patterns.
+
+    through filter you can,
+
+      1. choose to compare only the specific file & dir paths,
+
+      2. ignore specific file & dir paths from being compared at all.
+
+  usage:
+  -----
+
+    xfiles  dir_path_1  dir_path_2  -filter  sub-command{1,4}  [command]
+    xfiles  dir_path_1  dir_path_2  -f       sub-command{1,4}  [command]
+
+    sub-command{1, 4} means the sub-command should appear at least once
+    & at most 4 times.
+
+    a sub-command is made up of two parts:
+
+      the first part is any one of the following 20 strings:
+
+        -idr    -idr-i    -idr-ig   -idr-g    -idr-gi
+        -edr    -edr-i    -edr-ig   -edr-g    -edr-gi
+        -ifr    -ifr-i    -ifr-ig   -ifr-g    -ifr-gi
+        -efr    -efr-i    -efr-ig   -efr-g    -efr-gi
+
+      & the second part is a relevant pattern-string.
+
+    idr stands for include directory regexp.
+    edr stands for exclude directory regexp.
+    ifr stands for include file regexp.
+    efr stands for exclude file regexp.
+
+    the extra 'i' is the ignore case flag of the regexp.
+
+    the extra 'g' is the global match flag of the regexp.
+
+    searching-logic:
+    ---------------
+
+      a directory will be searched only if it's not excluded.
+        (its path isn't like edr)
+        an excluded directory will not be searched at all.
+
+      after that, if the dir is not included (path isn't like idr),
+        then its direct descendant files will be skipped.
+        though its direct descendant dirs will be considered for search.
+
+      whenever a compatible dir is found (path is idr-edr passed),
+        each of its direct descendant files is tested:
+          to be not excluded (path isn't like efr) and
+          to be included (path is like ifr).
+        if so then the file is considered a successful match.
+
+    note:
+    ----
+
+      the patterns test the paths relative to the root dir.
+      e.g., for dirs A/B/C, path of C relative to A is B/C.
+
+    list of commands:
+    ----------------
+                                  short-form
+      -list                         -l
+      -overview                     -o
+
+      to get helpful information about a command, execute:
+
+        xfiles  -h  command

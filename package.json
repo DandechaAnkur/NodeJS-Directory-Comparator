@@ -1,0 +1,25 @@
+{
+  "name": "dir_comparator",
+  "version": "0.2.5",
+  "description": "Finds Mutually Exclusive Files In 2 Directory Hierarchies.",
+  "main": "dir_comparator.js",
+  "author": "Ankur Dandecha",
+  "bin": {
+    "xfiles": "./bin/cli - xfiles.js"
+  },
+  "licence": "ISC",
+  "keywords": [
+    "Directory",
+    "Comparision",
+    "Difference",
+    "Mutually Exclusive Files",
+    "Tree"
+  ],
+  "dependencies": {
+    "dir_tree": "<=4.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DandechaAnkur/NodeJS-Directory-Comparator"
+  }
+}
